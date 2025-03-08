@@ -1,0 +1,373 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace; /* Matrix-style font */
+    background-color: black;
+    color: #00ff00; /* Green text */
+    overflow: hidden; /* Hide scrollbars */
+    height: 100vh;
+}
+
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Behind the container */
+}
+
+.container {
+    background-color: white; /* Original white background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    z-index: 1; /* Ensure container is above Matrix canvas */
+    /* Restore original text colors */
+    color: #333; 
+}
+
+
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px; /* Center the image */
+    display: block; /* Ensure margin auto works */
+    /* Restore original effects */
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* Softer shadow */
+    backdrop-filter: blur(5px); /* Reduced blur for better performance */
+    cursor: pointer;
+}
+/* Title */
+h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph */
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Social Media Icons */
+.socials a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 30px;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+/* Hover effect */
+.socials {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.socials a {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: white; /* Default background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Makes it circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
+}
+
+/* Icon inside */
+.socials a i {
+    font-size: 24px;
+    color: black;
+}
+
+/* Tooltip effect */
+.socials a span {
+    display: none;
+    position: absolute;
+    top: -40px;
+    background: #ff4384;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.socials a:hover span {
+    display: block;
+}
+
+/* Individual icon hover effects */
+.socials a[href*="instagram"]:hover {
+    background: #e4405f;
+}
+
+.socials a[href*="snapchat"]:hover {
+    background: #fffc00;
+}
+
+.socials a[href*="t.me"]:hover {
+    background: #0088cc;
+}
+
+
+
+
+
+/* Background */
+body {
+    background: linear-gradient(45deg, #0a192f, #00ffaa, #6a11cb, #ff007f);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Basic paragraph styling */
+.hover-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.hover-text:hover {
+    transform: scale(0.9);
+    color: #007bff;
+}
+
+/* Basic styling for the header */
+.hover-header {
+    overflow: hidden;
+    border-right: 2px solid #333; /* Cursor effect */
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    animation: 
+        typing 3.5s steps(30, end) infinite,
+        blink-caret 0.75s step-end infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Cursor blink effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #333; }
+}
+
+/* Hover effect for the header */
+.hover-header:hover {
+    transform: scale(0.9);
+    color: #007bff;
+}
+
+/* Basic styling for the paragraph */
+.hover-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the paragraph */
+.hover-text:hover {
+    transform: scale(0.9);
+    color: #007bff;
+}
+
+
+/* Add to existing CSS */
+.container {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Theme Toggle Button */
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f0f0f0;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Mode Styles (container only) */
+.container.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.container.dark-mode .hover-header {
+    color: #00ff00 !important;
+}
+
+.container.dark-mode .hover-text {
+    color: #cccccc !important;
+}
+
+.container.dark-mode .socials a {
+    background-color: #333333 !important;
+}
+
+.container.dark-mode .socials a i {
+    color: #ffffff !important;
+}
+
+.container.dark-mode .profile-pic {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Add these dark mode hover overrides */
+.container.dark-mode .socials a:hover {
+    transform: scale(1.2) !important;
+}
+
+.container.dark-mode .socials a[href*="instagram"]:hover {
+    background: #e4405f !important;
+}
+
+.container.dark-mode .socials a[href*="snapchat"]:hover {
+    background: #fffc00 !important;
+}
+
+.container.dark-mode .socials a[href*="t.me"]:hover {
+    background: #0088cc !important;
+}
+
+/* Fix text hover effects in dark mode */
+.container.dark-mode .hover-header:hover {
+    color: #00ff00 !important;
+    transform: scale(0.9);
+}
+
+.container.dark-mode .hover-text:hover {
+    color: #00ff00 !important;
+    transform: scale(0.9);
+}
+
+/* Fix tooltip in dark mode */
+.container.dark-mode .socials a:hover span {
+    background: #00ff00;
+    color: #000;
+}
+
+
+
+.typing-text {
+    display: inline-block;
+    position: relative;
+    padding-right: 2px;
+}
+
+/* Adjust for dark mode */
+.container.dark-mode .hover-header {
+    border-right-color: #00ff00;
+}
+
+.container.dark-mode .hover-header:hover {
+    color: #00ff00 !important;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        transform: scale(0.9); /* Shrinks the div */
+        width: 90%; /* Adjusts width */
+        max-width: 400px; /* Limits size */
+    }
+}
