@@ -171,13 +171,9 @@
 
 </section>
  
-
-
  <section id="contact" class="section contact contact-section">
   <div class="container">
     <h2 class="section-title">Get In Touch</h2>
-
-    
 
     <div class="contact-grid">
       <!-- LEFT: contact cards -->
@@ -217,11 +213,7 @@
           </div>
         </div>
       </div>
-
-     
 </section>
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script>
     // Mobile menu toggle
@@ -319,11 +311,8 @@
       section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
 
-    
     window.addEventListener('scroll', checkScroll);
     window.addEventListener('load', checkScroll);
-
-
     // Animate skill bars when skills section enters viewport
 (function() {
   const skillsSection = document.getElementById('skills');
@@ -362,10 +351,8 @@
       }
     });
   }, { threshold: 0.25 });
-
   observer.observe(skillsSection);
 })();
-
 
 // Simple contact form validation + mailto fallback
 (function(){
@@ -403,11 +390,9 @@
       messageError.textContent = 'Message must be at least 10 characters.';
       valid = false;
     }
-
     if (!valid) {
       return;
     }
-
     // Build mailto (fallback) — opens the user's email client
     const to = 'shadkurd998@gmail.com';
     const subject = encodeURIComponent('Message from portfolio site — ' + (nameInput.value.trim()));
@@ -426,9 +411,6 @@
     // If you later add a server endpoint, replace the mailto behaviour with fetch()
   });
 })();
-
-
   </script>
 </body>
-
 </html>
